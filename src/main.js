@@ -253,7 +253,7 @@ document.querySelector('#app').innerHTML = `
     <footer class="bg-black/30 backdrop-blur-sm py-12">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center text-gray-400">
-          <p class="mb-4">© 2024 Networking em Tecnologia. Todos os direitos reservados.</p>
+          <p class="mb-4">© 2024 Infotec190. Todos os direitos reservados.</p>
           <p class="text-sm">
             Grupos moderados e focados em networking profissional de qualidade.
           </p>
