@@ -7,7 +7,7 @@ function handleSubmit(event) {
   const message = encodeURIComponent(
     `Olá! Me chamo ${name} e trabalho com ${area}. Gostaria de participar do grupo de networking.`
   );
-  window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+  window.open(`https://api.whatsapp.com/send?phone=5519981009910&text=Ol%C3%A1,%20quero%20entrar%20nos%20grupos!`, '_blank');
 }
 
 document.querySelector('#app').innerHTML = `
