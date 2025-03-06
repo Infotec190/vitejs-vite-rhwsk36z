@@ -255,7 +255,7 @@ document.querySelector('#app').innerHTML = `
         <div class="max-w-4xl mx-auto text-center text-gray-400">
           <p class="mb-4">© 2024 Infotec190. Todos os direitos reservados.</p>
           <p class="text-sm">
-            Grupos moderados e focados em networkin profissional de qualidade.
+            Grupos moderados e focados em networking profissional de qualidade.
           </p>
         </div>
       </div>
