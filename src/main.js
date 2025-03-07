@@ -1,4 +1,4 @@
-import 'tailwindcss';
+
 
 
 function handleSubmit(event) {
