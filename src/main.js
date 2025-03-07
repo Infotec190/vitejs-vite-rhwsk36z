@@ -1,4 +1,4 @@
-import './style.css'
+
 
 function handleSubmit(event) {
   event.preventDefault();
