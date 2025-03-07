@@ -1,4 +1,4 @@
-
+import '../src/style.css'
 
 
 function handleSubmit(event) {
