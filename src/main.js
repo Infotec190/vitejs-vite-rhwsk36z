@@ -1,11 +1,6 @@
 
-function handleSubmit(event) {
-  event.preventDefault();
-  const name = document.getElementById('name').value;
-  const area = document.getElementById('area').value;
-  const message = encodeURIComponent(
-    `Olá! Me chamo ${name} e trabalho com ${area}. Gostaria de participar do grupo de networking.`
-  );
+function onClick(event) {
+  event.preventDefault(); 
   window.open(`https://api.whatsapp.com/send?phone=5519981009910&text=Ol%C3%A1,%20quero%20entrar%20nos%20grupos!`, '_blank');
 }
 
@@ -22,7 +17,7 @@ document.querySelector('#app').innerHTML = `
           acelere sua carreira através de networking estratégico
         </p>
         <div class="flex flex-wrap justify-center gap-6">
-          <button onclick="document.getElementById('cadastro').scrollIntoView({behavior: 'smooth'})" 
+          <button (click)="onClick(event)"
             class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
             Participar Agora
           </button>
@@ -215,34 +210,7 @@ document.querySelector('#app').innerHTML = `
             <h2 class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Faça parte da nossa comunidade
             </h2>
-            <form onsubmit="handleSubmit(event)" class="space-y-6">
-              <div>
-                <label for="name" class="block text-sm font-medium mb-2 text-gray-300">Nome Completo</label>
-                <input
-                  type="text"
-                  id="name"
-                  required
-                  class="w-full px-4 py-3 rounded-lg bg-white/5 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition text-white"
-                  placeholder="Digite seu nome completo"
-                >
-              </div>
-              <div>
-                <label for="area" class="block text-sm font-medium mb-2 text-gray-300">Área de Atuação</label>
-                <input
-                  type="text"
-                  id="area"
-                  required
-                  class="w-full px-4 py-3 rounded-lg bg-white/5 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition text-white"
-                  placeholder="Ex: Desenvolvimento Frontend, DevOps, Data Science"
-                >
-              </div>
-              <button
-                type="submit"
-                class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:from-blue-700 hover:to-purple-700"
-              >
-                Participar dos Grupos
-              </button>
-            </form>
+            
           </div>
         </div>
       </div>
@@ -262,4 +230,4 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
-document.querySelector('form').addEventListener('submit', handleSubmit);
+document.querySelector('button').addEventListener('click', onClick);
