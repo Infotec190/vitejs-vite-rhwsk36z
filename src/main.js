@@ -1,6 +1,6 @@
 
 function onClick(event) {
-  event.preventDefault(); 
+  event.preventDefault();
   window.open(`https://api.whatsapp.com/send?phone=5519981009910&text=Ol%C3%A1,%20quero%20entrar%20nos%20grupos!`, '_blank');
 }
 
@@ -17,8 +17,8 @@ document.querySelector('#app').innerHTML = `
           acelere sua carreira através de networking estratégico
         </p>
         <div class="flex flex-wrap justify-center gap-6">
-          <button (click)="onClick(event)"
-            class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+          <button (click)="onClick(event)"  id = "btn_pag"
+            class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl ">
             Participar Agora
           </button>
           <button onclick="document.getElementById('beneficios').scrollIntoView({behavior: 'smooth'})"
@@ -210,7 +210,12 @@ document.querySelector('#app').innerHTML = `
             <h2 class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Faça parte da nossa comunidade
             </h2>
-            
+              <div class="flex flex-wrap justify-center gap-6">
+                <button  (click)="onClick(event)" id ="btn_pag1"
+                  class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                  Participar Agora
+                </button>          
+              </div>
           </div>
         </div>
       </div>
@@ -230,4 +235,5 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
-document.querySelector('button').addEventListener('click', onClick);
+document.querySelector('#btn_pag').addEventListener('click', onClick);
+document.querySelector('#btn_pag1').addEventListener('click', onClick);
